@@ -17,9 +17,7 @@ public class DungeonEntity {
         return dungeonId;
     }
 
-    public void setDungeonId(int dungeonId) {
-        this.dungeonId = dungeonId;
-    }
+    public void setDungeonId(int dungeonId) { this.dungeonId = dungeonId; }
 
     @Override
     public boolean equals(Object o) {
