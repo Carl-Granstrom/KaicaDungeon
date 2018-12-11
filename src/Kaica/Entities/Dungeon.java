@@ -1,4 +1,4 @@
-package Kaica;
+package Kaica.Entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,8 +8,12 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "dungeon", schema = "kaicadungeon")
-public class DungeonEntity {
+public class Dungeon {
     private int dungeonId;
+
+    Dungeon(int m, int n){
+
+    }
 
     @Id
     @Column(name = "dungeonID")
@@ -23,7 +27,7 @@ public class DungeonEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        DungeonEntity that = (DungeonEntity) o;
+        Dungeon that = (Dungeon) o;
         return dungeonId == that.dungeonId;
     }
 

@@ -1,18 +1,17 @@
-package Kaica;
+package Kaica.Entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Objects;
 
 @Entity
 @Table(name = "room", schema = "kaicadungeon")
-public class RoomEntity {
+public class Room {
     private int roomId;
+    private ArrayList<Monster> monsters = new ArrayList<>();
 
     @Id
-    @Column(name = "roomID")
+    @Column(name = "room_id")
     public int getRoomId() {
         return roomId;
     }
@@ -25,7 +24,7 @@ public class RoomEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        RoomEntity that = (RoomEntity) o;
+        Room that = (Room) o;
         return roomId == that.roomId;
     }
 

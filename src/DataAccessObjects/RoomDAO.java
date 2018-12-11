@@ -1,6 +1,6 @@
 package DataAccessObjects;
 
-import Kaica.RoomEntity;
+import Kaica.Entities.Room;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -8,8 +8,8 @@ import javax.persistence.EntityTransaction;
 /**
  * Example code from: https://www.sitepoint.com/hibernate-introduction-persisting-java-objects/
  *
- * To be modified. I'm not sure that RoomEntity needs a DAO, possibly nice to have for the
- * MonsterEntity and ItemEntity.
+ * To be modified. I'm not sure that Room needs a DAO, possibly nice to have for the
+ * Monster and Item.
  */
 public class RoomDAO {
 
@@ -24,19 +24,19 @@ public class RoomDAO {
     //Replace the parameters with a call to random value constructor? Or solve in the Room class?
     public void persist(String name, String email) {
         beginTransaction();
-        RoomEntity user = new RoomEntity(name, email);
+        Room user = new Room(name, email);
         entityManager.persist(user);
         commitTransaction();
     }
 
-    public RoomEntity find(int id) {
-        return entityManager.find(RoomEntity.class, id);
+    public Room find(int id) {
+        return entityManager.find(Room.class, id);
     }
 
 
     public void update(int id, String name, String email) {
         beginTransaction();
-        RoomEntity room = entityManager.find(RoomEntity.class, id);
+        Room room = entityManager.find(Room.class, id);
         room.setName(name);
         room.setEmail(email);
         entityManager.merge(room);
@@ -45,7 +45,7 @@ public class RoomDAO {
 
     public void remove(int id) {
         beginTransaction();
-        RoomEntity user = entityManager.find(RoomEntity.class, id);
+        Room user = entityManager.find(Room.class, id);
         entityManager.remove(user);
         commitTransaction();
     }

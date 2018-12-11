@@ -1,11 +1,11 @@
-package Kaica;
+package Kaica.Entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name = "playeravatar", schema = "kaicadungeon")
-public class PlayeravatarEntity {
+public class PlayerAvatar {
     private int avatarId;
     private String avatarName;
     private int currHealth;
@@ -15,7 +15,7 @@ public class PlayeravatarEntity {
     private String description;
 
     @Id
-    @Column(name = "avatarID")
+    @Column(name = "avatar_id")
     public int getAvatarId() {
         return avatarId;
     }
@@ -25,7 +25,7 @@ public class PlayeravatarEntity {
     }
 
     @Basic
-    @Column(name = "avatarName")
+    @Column(name = "avatar_name")
     public String getAvatarName() {
         return avatarName;
     }
@@ -35,7 +35,7 @@ public class PlayeravatarEntity {
     }
 
     @Basic
-    @Column(name = "currHealth")
+    @Column(name = "curr_health")
     public int getCurrHealth() {
         return currHealth;
     }
@@ -45,7 +45,7 @@ public class PlayeravatarEntity {
     }
 
     @Basic
-    @Column(name = "maxHealth")
+    @Column(name = "max_health")
     public int getMaxHealth() {
         return maxHealth;
     }
@@ -55,7 +55,7 @@ public class PlayeravatarEntity {
     }
 
     @Basic
-    @Column(name = "baseArmor")
+    @Column(name = "base_armor")
     public int getBaseArmor() {
         return baseArmor;
     }
@@ -65,7 +65,7 @@ public class PlayeravatarEntity {
     }
 
     @Basic
-    @Column(name = "baseDamage")
+    @Column(name = "base_damage")
     public int getBaseDamage() {
         return baseDamage;
     }
@@ -88,7 +88,7 @@ public class PlayeravatarEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PlayeravatarEntity that = (PlayeravatarEntity) o;
+        PlayerAvatar that = (PlayerAvatar) o;
         return avatarId == that.avatarId &&
                 currHealth == that.currHealth &&
                 maxHealth == that.maxHealth &&

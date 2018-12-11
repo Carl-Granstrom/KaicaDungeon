@@ -1144,7 +1144,9 @@
     <table id="292" parent="11" name="monster"/>
     <table id="293" parent="11" name="player"/>
     <table id="294" parent="11" name="playeravatar"/>
-    <table id="295" parent="11" name="room"/>
+    <table id="295" parent="11" name="room">
+      <Comment>ensure bidirectional mapping</Comment>
+    </table>
     <column id="296" parent="288" name="itemID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
@@ -1287,45 +1289,45 @@
       <ColNames>monsterID</ColNames>
       <RefSchemaName>kaicadungeon</RefSchemaName>
       <RefTableName>monster</RefTableName>
-      <RefColNames>monsterid</RefColNames>
+      <RefColNames>monster_id</RefColNames>
     </foreign-key>
     <foreign-key id="321" parent="291" name="FK_Item_playerAvatar">
       <ColNames>avatarID</ColNames>
       <RefSchemaName>kaicadungeon</RefSchemaName>
       <RefTableName>playeravatar</RefTableName>
-      <RefColNames>avatarid</RefColNames>
+      <RefColNames>avatar_id</RefColNames>
     </foreign-key>
-    <column id="322" parent="292" name="monsterID">
+    <column id="322" parent="292" name="monster_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="323" parent="292" name="roomID">
+    <column id="323" parent="292" name="room_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="324" parent="292" name="type">
+    <column id="324" parent="292" name="monster_type">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="325" parent="292" name="name">
+    <column id="325" parent="292" name="monster_name">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="326" parent="292" name="currHealth">
+    <column id="326" parent="292" name="curr_health">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="327" parent="292" name="maxHealth">
+    <column id="327" parent="292" name="max_health">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1350,19 +1352,19 @@
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="331" parent="292" name="FK_Monster_Room">
-      <ColNames>roomID</ColNames>
+      <ColNames>room_id</ColNames>
       <Type>btree</Type>
     </index>
     <key id="332" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>monsterID</ColNames>
+      <ColNames>monster_id</ColNames>
       <Primary>1</Primary>
     </key>
     <foreign-key id="333" parent="292" name="FK_Monster_Room">
-      <ColNames>roomID</ColNames>
+      <ColNames>room_id</ColNames>
       <RefSchemaName>kaicadungeon</RefSchemaName>
       <RefTableName>room</RefTableName>
-      <RefColNames>roomid</RefColNames>
+      <RefColNames>room_id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
@@ -1408,44 +1410,44 @@
       <ColNames>playerID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="341" parent="294" name="avatarID">
+    <column id="341" parent="294" name="avatar_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="342" parent="294" name="avatarName">
+    <column id="342" parent="294" name="avatar_name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="294" name="playerID">
+    <column id="343" parent="294" name="player_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="344" parent="294" name="currHealth">
+    <column id="344" parent="294" name="curr_health">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="345" parent="294" name="maxHealth">
+    <column id="345" parent="294" name="max_health">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="346" parent="294" name="baseArmor">
+    <column id="346" parent="294" name="base_armor">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="347" parent="294" name="baseDamage">
+    <column id="347" parent="294" name="base_damage">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1458,44 +1460,44 @@
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="349" parent="294" name="FK_playerAvatar_Player">
-      <ColNames>playerID</ColNames>
+      <ColNames>player_id</ColNames>
       <Type>btree</Type>
     </index>
     <key id="350" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>avatarID</ColNames>
+      <ColNames>avatar_id</ColNames>
       <Primary>1</Primary>
     </key>
     <foreign-key id="351" parent="294" name="FK_playerAvatar_Player">
-      <ColNames>playerID</ColNames>
+      <ColNames>player_id</ColNames>
       <RefSchemaName>kaicadungeon</RefSchemaName>
       <RefTableName>player</RefTableName>
       <RefColNames>playerid</RefColNames>
     </foreign-key>
-    <column id="352" parent="295" name="roomID">
+    <column id="352" parent="295" name="room_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="353" parent="295" name="dungeonID">
+    <column id="353" parent="295" name="dungeon_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <index id="354" parent="295" name="FK_Room_Dungeon">
-      <ColNames>dungeonID</ColNames>
+      <ColNames>dungeon_id</ColNames>
       <Type>btree</Type>
     </index>
     <key id="355" parent="295" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>roomID</ColNames>
+      <ColNames>room_id</ColNames>
       <Primary>1</Primary>
     </key>
     <foreign-key id="356" parent="295" name="FK_Room_Dungeon">
-      <ColNames>dungeonID</ColNames>
+      <ColNames>dungeon_id</ColNames>
       <RefSchemaName>kaicadungeon</RefSchemaName>
       <RefTableName>dungeon</RefTableName>
       <RefColNames>dungeonid</RefColNames>

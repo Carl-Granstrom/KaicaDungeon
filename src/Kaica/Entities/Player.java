@@ -1,11 +1,11 @@
-package Kaica;
+package Kaica.Entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name = "player", schema = "kaicadungeon")
-public class PlayerEntity {
+public class Player {
     private int playerId;
     private String playerName;
     private String password;
@@ -37,7 +37,7 @@ public class PlayerEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PlayerEntity that = (PlayerEntity) o;
+        Player that = (Player) o;
         return playerId == that.playerId &&
                 Objects.equals(playerName, that.playerName);
     }

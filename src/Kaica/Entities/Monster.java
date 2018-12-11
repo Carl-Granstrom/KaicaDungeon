@@ -1,4 +1,4 @@
-package Kaica;
+package Kaica.Entities;
 
 import Interfaces.Describable;
 import Interfaces.Lootable;
@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "monster", schema = "kaicadungeon")
-public class MonsterEntity implements Describable, Lootable {
+public class Monster implements Describable, Lootable {
     private int monsterId;
     private int armor;
     private int currHealth;
@@ -19,7 +19,7 @@ public class MonsterEntity implements Describable, Lootable {
     private String type;
 
     @Id
-    @Column(name = "monsterID")
+    @Column(name = "monster_id")
     public int getMonsterId() {
         return monsterId;
     }
@@ -39,7 +39,7 @@ public class MonsterEntity implements Describable, Lootable {
     }
 
     @Basic
-    @Column(name = "currHealth")
+    @Column(name = "curr_health")
     public int getCurrHealth() {
         return currHealth;
     }
@@ -72,7 +72,7 @@ public class MonsterEntity implements Describable, Lootable {
     }
 
     @Basic
-    @Column(name = "maxHealth")
+    @Column(name = "max_health")
     public int getMaxHealth() {
         return maxHealth;
     }
@@ -82,7 +82,7 @@ public class MonsterEntity implements Describable, Lootable {
     }
 
     @Basic
-    @Column(name = "name")
+    @Column(name = "monster_name")
     public String getName() {
         return name;
     }
@@ -92,7 +92,7 @@ public class MonsterEntity implements Describable, Lootable {
     }
 
     @Basic
-    @Column(name = "type")
+    @Column(name = "monster_type")
     public String getType() {
         return type;
     }
@@ -105,7 +105,7 @@ public class MonsterEntity implements Describable, Lootable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        MonsterEntity that = (MonsterEntity) o;
+        Monster that = (Monster) o;
         return monsterId == that.monsterId &&
                 armor == that.armor &&
                 currHealth == that.currHealth &&
