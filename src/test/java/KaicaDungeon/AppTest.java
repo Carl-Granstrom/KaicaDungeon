@@ -3,6 +3,7 @@
  */
 package KaicaDungeon;
 
+import main.java.KaicaDungeon.App;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

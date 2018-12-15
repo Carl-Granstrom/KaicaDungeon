@@ -1,4 +1,4 @@
-package Kaica.Entities;
+package main.java.KaicaDungeon.Entities;
 
 import javax.persistence.*;
 import java.util.ArrayList;
