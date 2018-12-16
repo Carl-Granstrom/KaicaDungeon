@@ -13,6 +13,8 @@ public class Player {
     private int totalScore;
     private int highScore;
 
+    protected Player(){}
+
     @Id
     @Column(name = "playerID")
     public int getPlayerId() {

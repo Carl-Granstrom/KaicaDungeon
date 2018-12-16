@@ -14,6 +14,8 @@ public class PlayerAvatar {
     private int baseDamage;
     private String description;
 
+    protected PlayerAvatar(){}
+
     @Id
     @Column(name = "avatar_id")
     public int getAvatarId() {

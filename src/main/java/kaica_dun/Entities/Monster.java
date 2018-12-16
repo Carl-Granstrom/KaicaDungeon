@@ -18,6 +18,8 @@ public class Monster implements Describable, Lootable {
     private String name;
     private String type;
 
+    protected Monster(){}
+
     @Id
     @Column(name = "monster_id")
     public int getMonsterId() {

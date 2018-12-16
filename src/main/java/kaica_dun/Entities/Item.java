@@ -11,6 +11,8 @@ public class Item {
     private String description;
     private Integer playerId;
 
+    protected Item(){}
+
     @Id
     @Column(name = "itemID")
     public int getItemId() {

@@ -11,6 +11,8 @@ public class EquippableItem {
     private int armor;
     private int damage;
 
+    protected EquippableItem(){}
+
     @Id
     @Column(name = "itemID")
     public int getItemId() {

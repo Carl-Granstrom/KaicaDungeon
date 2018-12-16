@@ -9,6 +9,8 @@ public class ConsumableItem {
     private int itemId;
     private int uses;
 
+    protected ConsumableItem(){}
+
     @Id
     @Column(name = "itemID")
     public int getItemId() {

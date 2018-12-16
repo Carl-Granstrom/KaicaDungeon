@@ -1,6 +1,9 @@
 package main.java.kaica_dun.Entities;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -9,6 +12,8 @@ import java.util.Objects;
 public class Room {
     private int roomId;
     private ArrayList<Monster> monsters = new ArrayList<>();
+
+    protected Room(){}
 
     @Id
     @Column(name = "room_id")

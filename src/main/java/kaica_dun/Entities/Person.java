@@ -16,8 +16,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name="person")
 public class Person {
-    @Id
 
+    protected Person(){}
+
+    @Id
     @Column(name="id")
     private int id;
 

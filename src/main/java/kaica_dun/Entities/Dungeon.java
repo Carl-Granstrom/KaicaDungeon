@@ -11,9 +11,7 @@ import java.util.Objects;
 public class Dungeon {
     private int dungeonId;
 
-    Dungeon(int m, int n){
-
-    }
+    protected Dungeon(){}
 
     @Id
     @Column(name = "dungeonID")
