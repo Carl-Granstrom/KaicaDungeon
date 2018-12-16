@@ -6,14 +6,14 @@
   <session-factory>
     <property name="connection.url">jdbc:mysql://localhost:3306/kaicadungeon</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-      <mapping class="main.java.KaicaDungeon.Entities.Dungeon"/>
-      <mapping class="main.java.KaicaDungeon.Entities.Monster"/>
-      <mapping class="main.java.KaicaDungeon.Entities.Player"/>
-      <mapping class="main.java.KaicaDungeon.Entities.Room"/>
-      <mapping class="main.java.KaicaDungeon.Entities.ConsumableItem"/>
-      <mapping class="main.java.KaicaDungeon.Entities.EquippableItem"/>
-      <mapping class="main.java.KaicaDungeon.Entities.Item"/>
-      <mapping class="main.java.KaicaDungeon.Entities.PlayerAvatar"/>
+      <mapping class="main.java.kaica_dun.Entities.Dungeon"/>
+      <mapping class="main.java.kaica_dun.Entities.Monster"/>
+      <mapping class="main.java.kaica_dun.Entities.Player"/>
+      <mapping class="main.java.kaica_dun.Entities.Room"/>
+      <mapping class="main.java.kaica_dun.Entities.ConsumableItem"/>
+      <mapping class="main.java.kaica_dun.Entities.EquippableItem"/>
+      <mapping class="main.java.kaica_dun.Entities.Item"/>
+      <mapping class="main.java.kaica_dun.Entities.PlayerAvatar"/>
       <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

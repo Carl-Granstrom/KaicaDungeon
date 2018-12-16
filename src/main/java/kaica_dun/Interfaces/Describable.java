@@ -1,4 +1,4 @@
-package main.java.KaicaDungeon.Interfaces;
+package main.java.kaica_dun.Interfaces;
 
 /**
  * All object you might want to look at are describable. Used via Player.lookAt(Describable).

@@ -1,7 +1,7 @@
-package main.java.KaicaDungeon.Entities;
+package main.java.kaica_dun.Entities;
 
-import main.java.KaicaDungeon.Interfaces.Describable;
-import main.java.KaicaDungeon.Interfaces.Lootable;
+import main.java.kaica_dun.Interfaces.Describable;
+import main.java.kaica_dun.Interfaces.Lootable;
 
 import javax.persistence.*;
 import java.util.Objects;

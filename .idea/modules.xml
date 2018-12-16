@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/KaicaDungeon.iml" filepath="$PROJECT_DIR$/KaicaDungeon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kaica_dun.iml" filepath="$PROJECT_DIR$/kaica_dun.iml" />
     </modules>
   </component>
 </project>

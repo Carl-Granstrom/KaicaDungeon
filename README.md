@@ -26,7 +26,7 @@ This is the logical model for the database and object persistance.
 
 Make sure that we are happy with module and its name.
 
-* Should perhaps there be a KaicaDungeon.main for the main App file, and then import the classes import `main.java.KaicaDungeon.Entities.Item;`. MAin class can be defined in Gradle build file.
+* Should perhaps there be a KaicaDungeon.main for the main App file, and then import the classes import `main.java.kaica_dun.Entities.Item;`. MAin class can be defined in Gradle build file.
 
 * 
 

@@ -1,4 +1,4 @@
-package main.java.KaicaDungeon.Entities;
+package main.java.kaica_dun.Entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

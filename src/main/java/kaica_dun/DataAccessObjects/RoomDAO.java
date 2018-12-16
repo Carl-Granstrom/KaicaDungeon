@@ -1,6 +1,6 @@
-package main.java.KaicaDungeon.DataAccessObjects;
+package main.java.kaica_dun.DataAccessObjects;
 
-import main.java.KaicaDungeon.Entities.Room;
+import main.java.kaica_dun.Entities.Room;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
