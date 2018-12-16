@@ -20,7 +20,7 @@ Build and run the project with gradle using the gradle wrapper `./gradlew build`
 
 
 ### UML diagram
-This is the logical model for the database and object persistance.
+This is the logical model for the database and object persistance. It is subject to change.
 
 ![ . . . ](KaicaDungeon.png)
 
